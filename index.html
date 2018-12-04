@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tracer</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <style>
+    .gallery {
+      margin: auto;
+      width: 85%;
+      padding-bottom: 100px;
+    }
+    .item {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+    .hoverbutton {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div style="margin-top: 10%; margin-bottom: 20%">
+      <h1>Tracer</h1>
+      <h5>A Path Tracer by Ryan Annis</h5>
+      <hr>
+
+      <h4>Texture Mapping</h4>
+
+      <div class ="gallery">
+          <div class = "item active" label="Helmet with Metallic Rough Textures"> 
+            <img src="images/Screenshots/TextureMapping/TextureMapping_helmetFull.png" width="100%">
+          </div>
+          <div class = "item" label="Helmet With Only Basecolor">
+            <img src="images/Screenshots/TextureMapping/textured_helmet_norough.png" width="100%">
+          </div>
+      </div>
+
+      <h4>Normal Interpolation</h4>
+
+      <div class ="gallery">
+          <div class = "item active" label="Interpolated Normals Rendered"> 
+            <img src="images/Screenshots/Linerender/normal_map.png" width="100%">
+          </div>
+          <div class = "item" label="Why Normals Don't Always Work"> 
+              <img src="images/Screenshots/Linerender/helmet.png" width="100%">
+            </div>
+      </div>
+
+      <h4>Multithreaded Rendering</h4>
+
+      <div class ="gallery">
+          <div class = "item active" label="Test Results"> 
+            <img src="images/Screenshots/Multithreading/Multithreading Timings_  62012 Tris, Max 10 Bounces, 1 Spherical Area Light, 10SPP at 1000x1000.png" width="100%">
+          </div>
+      </div>
+
+      <h4>Two Level BVH</h4>
+
+      <div class ="gallery">
+          <div class = "item active" label="Test Results"> 
+            <img src="images/Screenshots/BVH/BVH_Perf.png" width="100%">
+          </div>
+          <div class = "item" label="Object Level"> 
+              <img src="images/Screenshots/BVH/object_hierarchy.png" width="100%">
+          </div>
+      </div>
+
+      <h4>Path Tracing (Importance Sampling)</h4>
+
+      <div class ="gallery">
+          <div class = "item active" label="No Environment Importance (50k spp)"> 
+            <img src="images/Screenshots/Importance Sampling/teapot_50000s.png" width="100%">
+          </div>
+          <div class = "item" label="Environment Importance"> 
+              <img src="images/Screenshots/Importance Sampling/teapot_30_nmis.png" width="100%">
+          </div>
+          <div class = "item" label="Multiple Importance"> 
+              <img src="images/Screenshots/Importance Sampling/teapot_30i0s_mis.png" width="100%">
+          </div>
+      </div>
+
+      <h4>Fresnel Dielectrics</h4>
+
+      <div class ="gallery">
+          <div class = "item active" label="Fresnel Reflection"> 
+            <img src="images/Screenshots/Fresnel/Fresnel-Reflection.png" width="100%">
+          </div>
+          <div class = "item" label="Fresnel Fresnel-Refraction"> 
+              <img src="images/Screenshots/Fresnel/Fresnel-Refraction.png" width="100%">
+          </div>
+      </div>
+
+      <h4>Spherical Area Lights</h4>
+      <div class ="gallery">
+          <div class = "item active" label="Monkey Render"> 
+            <img src="images/Screenshots/SphereLight/basic_spherelight_2.png" width="100%">
+          </div>
+      </div>
+
+      <h4>Low Discrepency Sampling</h4>
+      <div class ="gallery">
+          <div class = "item active" label="Uniform Random Samples"> 
+            <img src="images/Screenshots/Sampler/Uniform Random Distribution.png" width="100%">
+          </div>
+          <div class="item" label="Straified Samples">
+            <img src="images/Screenshots/Sampler/Stratified Sampling.png" width="100%">
+          </div>
+          <div class="item" label="Monkey 4SPP Stratified">
+              <img src="images/Screenshots/Stratified/4spp/ss_4spp.png" width="100%">
+          </div>
+          <div class="item" label="Monkey 4SPP Uniform Random">
+              <img src="images/Screenshots/Stratified/4spp/ur_4spp.png" width="100%">
+          </div>
+      </div>
+
+      <h4>Final Scene</h4>
+      <div class ="gallery" style="width: 100%;">
+          <div class = "item active" label="Final Scene"> 
+            <img src="images/Screenshots/FinalScene/FInalScene.png" width="100%">
+          </div>
+          <div class="item" label="Creation of Final Scene">
+              <img src="images/Screenshots/FinalScene/creating finalscene.png" width="100%">
+          </div>
+      </div>
+
+      <h1>Extra Objectives</h1>
+
+      <h4>Disney BRDF</h4>
+      <div class ="gallery">
+          <div class = "item active" label="Glossy Monkey"> 
+            <img src="images/Screenshots/PBR/PBR_Monkey_Glossy.png" width="100%">
+          </div>
+          <div class = "item" label="Materials Test"> 
+              <img src="images/Screenshots/PBR/pbr.png" width="100%">
+            </div>
+      </div>
+
+      <h4>HDR Environment Maps</h4>
+      <div class ="gallery">
+          <div class = "item active" label="Environment Map Day"> 
+            <img src="images/Screenshots/EnvMaps/envlight_lucy_day.png" width="100%">
+          </div>
+          <div class = "item" label="Environment Map Night"> 
+              <img src="images/Screenshots/EnvMaps/envlight_lucy_night.png" width="100%">
+            </div>
+      </div>
+
+      <h4>Line Rendering</h4>
+      <div class ="gallery">
+          <div class = "item active" label="Hard Materials"> 
+            <img src="images/Screenshots/Linerender/LineRender-hard.png" width="100%">
+          </div>
+          <div class = "item" label="Organics"> 
+              <img src="images/Screenshots/Linerender/Line_Render-Organics.png" width="100%">
+            </div>
+      </div>
+
+      <h4>Homogenous Volumetrics</h4>
+      <div class ="gallery">
+          <div class = "item active" label="Dragon Volumetric"> 
+            <img src="images/Screenshots/VolumetricScattering/attenuation.png" width="100%">
+          </div>
+      </div>
+
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <script type="text/javascript">
+    const galleries = document.querySelectorAll('.gallery');
+    galleries.forEach(gallery => {
+      let switcher = gallery.appendChild(document.createElement("span"));
+      Array.from(gallery.children).forEach(child => {
+        if(child.classList.contains("item")){
+          let text = child.getAttribute("label");
+          let hover = switcher.appendChild(document.createElement("span"));
+          hover.classList.add("hoverbutton");
+          hover.innerHTML = text;
+          hover.addEventListener("mouseenter", function(event) {
+            Array.from(gallery.children).forEach(element => {element.classList.remove("active")});
+            child.classList.add("active");
+          });
+        }
+      });
+    });  
+  </script>
+</body>
+</html>
