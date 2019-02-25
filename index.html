@@ -177,10 +177,7 @@
 
     </div>
   </div>
-
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
+  
   <script type="text/javascript">
     const galleries = document.querySelectorAll('.gallery');
     galleries.forEach(gallery => {
@@ -191,7 +188,12 @@
           let hover = switcher.appendChild(document.createElement("span"));
           hover.classList.add("hoverbutton");
           hover.innerHTML = text;
-          hover.addEventListener("mouseenter", function(event) {
+          
+          hover.addEventListener("onclick", function(event) {
+            Array.from(gallery.children).forEach(element => {element.classList.remove("active")});
+            child.classList.add("active");
+          });
+          hover.addEventListener("touchstart", function(event) {
             Array.from(gallery.children).forEach(element => {element.classList.remove("active")});
             child.classList.add("active");
           });
@@ -201,3 +203,6 @@
   </script>
 </body>
 </html>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
