@@ -189,7 +189,7 @@
           hover.classList.add("hoverbutton");
           hover.innerHTML = text;
           
-          hover.addEventListener("onclick", function(event) {
+          hover.addEventListener("click", function(event) {
             Array.from(gallery.children).forEach(element => {element.classList.remove("active")});
             child.classList.add("active");
           });
